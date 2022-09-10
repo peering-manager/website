@@ -11,9 +11,6 @@ h3 {
   padding: 2rem 2rem 0;
   font-size: .75rem;
 }
-.footer a:hover, a:visited {
-  color: #ededed;
-}
 .home .buttons {
   justify-content: space-around;
 }
