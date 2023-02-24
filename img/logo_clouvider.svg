@@ -6,8 +6,6 @@
 	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#19083A;}
 	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#67C3CB;}
 	.st2{fill:#19083A;stroke:#19083A;stroke-width:0.216;stroke-miterlimit:45;}
-	.st3{font-family:'Montserrat-Light';}
-	.st4{font-size:9px;}
 </style>
 <path class="st0" d="M195.3,80.4c-6.9,6.7-17.9,6.7-24.8,0c-3.3-3.2-5.2-7.7-5.1-12.4c-0.1-9.5,7.6-17.3,17.1-17.4
 	c0.1,0,0.2,0,0.4,0c4.7-0.1,9.2,1.7,12.4,5c3.4,3.2,5.2,7.7,5.1,12.4C200.6,72.6,198.7,77.1,195.3,80.4L195.3,80.4z M44.1,65.8h-3.4
@@ -47,5 +45,8 @@
 	c1.4,0,2.6,1.2,2.6,2.6C76.3,74.2,79.4,74.2,79.3,72.2z"/>
 <path class="st1" d="M64.1,72.2c0.1-3.1-2.3-5.8-5.4-6c-3.1-0.1-5.8,2.3-6,5.4c0,0.2,0,0.4,0,0.5c-0.1,2,3,2,3.1,0
 	c0.1-1.4,1.3-2.5,2.8-2.4c1.3,0.1,2.3,1.1,2.4,2.4C61.1,74.2,64.2,74.2,64.1,72.2z"/>
-<text transform="matrix(1 0 0 1 397.6641 85.1992)"><tspan x="0" y="0" class="st2 st3 st4">T</tspan><tspan x="5.1" y="0" class="st2 st3 st4">M</tspan></text>
+<g>
+	<path class="st2" d="M400,79.3h-2.3v-0.4h5v0.4h-2.3v5.9H400V79.3z"/>
+	<path class="st2" d="M409.8,85.2l0-5.4l-2.6,4.6h-0.2l-2.6-4.5v5.4h-0.5v-6.3h0.4l2.8,4.9l2.8-4.9h0.4l0,6.3H409.8z"/>
+</g>
 </svg>
