@@ -8,14 +8,10 @@ h3 {
   font-size: 1.25rem;
 }
 .footer {
-  padding: 2rem 2rem 0;
   font-size: .75rem;
 }
 .home .buttons {
   justify-content: space-around;
-}
-.home .header {
-  background-color: #f8f9fa!important;
 }
 .home .section {
   position: relative;
@@ -30,8 +26,8 @@ h3 {
   margin-right: auto;
 }
 .home .section.less-padding {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .navbar {
   line-height: 54px;
@@ -40,7 +36,7 @@ h3 {
   padding-left: .5rem;
   font-size: 1.5rem;
 }
-.home .btn {
+.home .btn-custom {
   border-width: 2px;
   border-color: #535251;
   margin: .75rem;
@@ -48,12 +44,11 @@ h3 {
   text-transform: uppercase;
   color: #535251;
   font-size: 1.125rem;
-  border-radius: .25rem;
   font-weight: 400;
   transition: all .1s linear;
   width: 30%;
 }
-.home a.btn:hover {
+.home a.btn-custom:hover {
   color: #f8f9fa;
   background-color: #535251;
 }
@@ -72,15 +67,6 @@ h3 {
 .bg-yellow {
   background-color: #fcc92d;
 }
-.bg-dark-grey {
-  background-color: #535251;
-}
-.bg-grey {
-  background-color: #9d9c9b;
-}
-.bg-light-grey {
-  background-color: #ededed;
-}
 .font-normal {
   font-weight: 400;
 }
@@ -92,15 +78,6 @@ h3 {
 }
 .text-yellow {
   color: #fcc92d;
-}
-.text-dark-grey {
-  color: #535251;
-}
-.text-grey {
-  color: #9d9c9b;
-}
-.text-light-grey {
-  color: #ededed;
 }
 .text-shrink {
   max-width: 50rem;
