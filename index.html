@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <link href="libs/bootstrap-5.3.2-dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="libs/bootstrap-icons-1.11.2/font/bootstrap-icons.css">
   <link rel="stylesheet" href="main.css">
   <link rel="icon" type="image/png" href="img/logo_yellow.svg">
   <title>Peering Manager</title>
@@ -52,6 +52,39 @@
             </a>
           </li>
         </ul>
+        <!--
+        <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+          <li class="nav-item dropdown">
+            <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+              <svg class="bi my-1 theme-icon-active"><use href="libs/bootstrap-icons-1.11.2/bootstrap-icons.svg#circle-half"></use></svg>
+              <span class="d-lg-none ms-2">Toggle theme</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme" style="--bs-dropdown-min-width: 8rem;">
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
+                  <svg class="bi me-2 opacity-50 theme-icon"><use href="libs/bootstrap-icons-1.11.2/bootstrap-icons.svg#sun-fill"></use></svg>
+                  Light
+                  <svg class="bi ms-auto d-none"><use href="libs/bootstrap-icons-1.11.2/bootstrap-icons.svg#check2"></use></svg>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="dark">
+                  <svg class="bi me-2 opacity-50 theme-icon"><use href="libs/bootstrap-icons-1.11.2/bootstrap-icons.svg#moon-stars-fill"></use></svg>
+                  Dark
+                  <svg class="bi ms-auto d-none"><use href="libs/bootstrap-icons-1.11.2/bootstrap-icons.svg#check2"></use></svg>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto">
+                  <svg class="bi me-2 opacity-50 theme-icon"><use href="libs/bootstrap-icons-1.11.2/bootstrap-icons.svg#circle-half"></use></svg>
+                  Auto
+                  <svg class="bi ms-auto d-none"><use href="libs/bootstrap-icons-1.11.2/bootstrap-icons.svg#check2"></use></svg>
+                </button>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        -->
       </div>
     </div>
   </nav>
@@ -59,7 +92,9 @@
     <div class="header section less-padding bg-body-tertiary">
       <div class="container z-10">
         <div class="text-center">
-          <img src="img/banner.png" alt="Peering Manager" class="img-fluid">
+          <picture>
+            <img src="img/pm-light.svg" class="img-fluid" alt="Peering Manager">
+          </picture>
           <div class="buttons mt-4">
             <a href="https://demo.peering-manager.net/" target="_blank" rel="nofollow noopener" class="btn btn-custom">
               Demo
@@ -104,18 +139,13 @@
         <hr>
         <h3 class="text-dark-emphasis text-shrink leading-normal font-normal mx-auto" id="sponsors">The amazing sponsors believing in the Peering Manager project:</h3>
         <div class="row align-items-center mb-5">
-          <a class="col-6" href="https://www.de-cix.net/" target="_blank" rel="nofollow noopener">
-            <img src="img/logo_decix.svg" height="180" class="d-inline-block align-top" alt="DE-CIX">
-          </a>
-          <a class="col-6" href="https://www.linx.net" target="_blank" rel="nofollow noopener">
+          <a class="col" href="https://www.linx.net" target="_blank" rel="nofollow noopener">
             <img src="img/logo_linx.png" height="120" class="d-inline-block align-top" alt="London Internet Exchange">
           </a>
-        </div>
-        <div class="row align-items-center">
-          <a class="col-6" href="https://www.clouvider.com/" target="_blank" rel="nofollow noopener">
+          <a class="col" href="https://www.clouvider.com/" target="_blank" rel="nofollow noopener">
             <img src="img/logo_clouvider.svg" height="160" class="d-inline-block align-top" alt="Clouvider">
           </a>
-          <a class="col-6" href="https://www.htp.net/" target="_blank" rel="nofollow noopener">
+          <a class="col" href="https://www.htp.net/" target="_blank" rel="nofollow noopener">
             <img src="img/logo_htp.png" height="180" class="d-inline-block align-top" alt="htp GmbH">
           </a>
         </div>
@@ -127,7 +157,10 @@
       </div>
     </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="libs/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="svg4everybody.min.js"></script>
+  <!-- <script src="mode-toggle.js"></script> -->
+  <script>svg4everybody();</script>
 </body>
 
 </html>

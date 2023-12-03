@@ -7,6 +7,12 @@ h1 {
 h3 {
   font-size: 1.25rem;
 }
+.bi {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  fill: currentcolor;
+}
 .footer {
   font-size: .75rem;
 }
@@ -57,6 +63,17 @@ h3 {
 }
 .z-10 {
   z-index: 10;
+}
+.only-on-dark {
+  display: none;
+}
+@media (prefers-color-scheme: dark) {
+  .only-on-dark {
+    display: initial;
+  }
+  .only-on-light {
+    display: none;
+  }
 }
 
 /* Utilities */
