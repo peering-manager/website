@@ -4,18 +4,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="libs/bootstrap-5.3.2-dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="libs/bootstrap-icons-1.11.2/font/bootstrap-icons.css">
+  <link href="libs/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="libs/bootstrap-icons-1.11.3/font/bootstrap-icons.css">
   <link rel="stylesheet" href="main.css">
+  <script src="mode-toggle.js"></script>
   <link rel="icon" type="image/png" href="img/logo_yellow.svg">
   <title>Peering Manager</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
+  <header class="navbar navbar-expand-lg sticky-top bg-body-tertiary border-bottom">
     <div class="container-fluid">
-      <a href="https://peering-manager.net/" class="navbar-brand">
-        <img src="img/logo_yellow.svg" height="54" class="d-inline-block align-top" alt=""> Peering Manager
+      <a href="/" class="navbar-brand">
+        <img src="img/logo_yellow.svg" height="48" alt="Peering Manager Logo"> Peering Manager
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -23,23 +24,18 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="/">
-              <i class="bi bi-house-fill"></i> Home
-            </a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="https://docs.peering-manager.net/">
               <i class="bi bi-book-fill"></i> Documentation
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="talks.html"><i class="bi bi-easel-fill"></i>
-              Talks</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="https://github.com/peering-manager/">
               <i class="bi bi-github"></i> GitHub
             </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="talks.html"><i class="bi bi-easel-fill"></i>
+              Talks</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="https://netdev.chat">
@@ -52,49 +48,46 @@
             </a>
           </li>
         </ul>
-        <!--
         <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
           <li class="nav-item dropdown">
             <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
-              <svg class="bi my-1 theme-icon-active"><use href="libs/bootstrap-icons-1.11.2/bootstrap-icons.svg#circle-half"></use></svg>
+              <svg class="bi my-1 theme-icon-active"><use href="libs/bootstrap-icons-1.11.3/bootstrap-icons.svg#circle-half"></use></svg>
               <span class="d-lg-none ms-2">Toggle theme</span>
             </button>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme" style="--bs-dropdown-min-width: 8rem;">
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
-                  <svg class="bi me-2 opacity-50 theme-icon"><use href="libs/bootstrap-icons-1.11.2/bootstrap-icons.svg#sun-fill"></use></svg>
+                  <svg class="bi me-2 opacity-50 theme-icon"><use href="libs/bootstrap-icons-1.11.3/bootstrap-icons.svg#sun-fill"></use></svg>
                   Light
-                  <svg class="bi ms-auto d-none"><use href="libs/bootstrap-icons-1.11.2/bootstrap-icons.svg#check2"></use></svg>
+                  <svg class="bi ms-auto d-none"><use href="libs/bootstrap-icons-1.11.3/bootstrap-icons.svg#check2"></use></svg>
                 </button>
               </li>
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="dark">
-                  <svg class="bi me-2 opacity-50 theme-icon"><use href="libs/bootstrap-icons-1.11.2/bootstrap-icons.svg#moon-stars-fill"></use></svg>
+                  <svg class="bi me-2 opacity-50 theme-icon"><use href="libs/bootstrap-icons-1.11.3/bootstrap-icons.svg#moon-stars-fill"></use></svg>
                   Dark
-                  <svg class="bi ms-auto d-none"><use href="libs/bootstrap-icons-1.11.2/bootstrap-icons.svg#check2"></use></svg>
+                  <svg class="bi ms-auto d-none"><use href="libs/bootstrap-icons-1.11.3/bootstrap-icons.svg#check2"></use></svg>
                 </button>
               </li>
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto">
-                  <svg class="bi me-2 opacity-50 theme-icon"><use href="libs/bootstrap-icons-1.11.2/bootstrap-icons.svg#circle-half"></use></svg>
+                  <svg class="bi me-2 opacity-50 theme-icon"><use href="libs/bootstrap-icons-1.11.3/bootstrap-icons.svg#circle-half"></use></svg>
                   Auto
-                  <svg class="bi ms-auto d-none"><use href="libs/bootstrap-icons-1.11.2/bootstrap-icons.svg#check2"></use></svg>
+                  <svg class="bi ms-auto d-none"><use href="libs/bootstrap-icons-1.11.3/bootstrap-icons.svg#check2"></use></svg>
                 </button>
               </li>
             </ul>
           </li>
         </ul>
-        -->
       </div>
     </div>
-  </nav>
+  </header>
   <div class="home">
     <div class="header section less-padding bg-body-tertiary">
       <div class="container z-10">
         <div class="text-center">
-          <picture>
-            <img src="img/pm-light.svg" class="img-fluid" alt="Peering Manager">
-          </picture>
+          <img src="img/pm-light.svg" class="img-fluid hide-theme-dark" alt="Peering Manager">
+          <img src="img/pm-dark.svg" class="img-fluid hide-theme-light" alt="Peering Manager">
           <div class="buttons mt-4">
             <a href="https://demo.peering-manager.net/" target="_blank" rel="nofollow noopener" class="btn btn-custom">
               Demo
@@ -159,9 +152,8 @@
     </div>
     </div>
   </div>
-  <script src="libs/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="libs/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="svg4everybody.min.js"></script>
-  <!-- <script src="mode-toggle.js"></script> -->
   <script>svg4everybody();</script>
 </body>
 
