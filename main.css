@@ -42,14 +42,16 @@ h3 {
   font-size: 1.125rem;
   font-weight: 400;
   transition: all .1s linear;
-  width: 30%;
+  min-width: 10rem;
+}
+@media (min-width: 576px) {
+  .home .btn-custom {
+    width: 30%;
+  }
 }
 .home a.btn-custom:hover {
   color: #f8f9fa;
   background-color: #535251;
-}
-.w-35 {
-  width: 35%!important;
 }
 .z-10 {
   z-index: 10;
@@ -60,34 +62,14 @@ html[data-bs-theme="dark"] .hide-theme-dark {
 html[data-bs-theme="light"] .hide-theme-light {
   display: none !important;
 }
-@media (prefers-color-scheme: dark) {
-  .only-on-dark {
-    display: initial;
-  }
-  .only-on-light {
-    display: none;
-  }
-}
 
 /* Utilities */
 
-.bg-dark-yellow {
-  background-color: #f7a82c;
-}
-.bg-yellow {
-  background-color: #fcc92d;
-}
-.font-normal {
-  font-weight: 400;
-}
 .leading-normal {
   line-height: 1.5;
 }
 .text-dark-yellow {
   color: #f7a82c;
-}
-.text-yellow {
-  color: #fcc92d;
 }
 .text-shrink {
   max-width: 50rem;
