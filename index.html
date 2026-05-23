@@ -4,159 +4,217 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="libs/bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="stylesheet" href="libs/bootstrap-icons-1.11.3/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="main.css">
-  <script src="mode-toggle.js"></script>
-  <link rel="icon" type="image/svg+xml" href="img/logo_yellow.svg">
+  <title>Peering Manager</title>
   <meta name="description" content="Peering Manager is an open-source BGP session management solution built with Python and Django.">
+  <meta name="theme-color" content="#fdfbf5">
+  <link rel="canonical" href="https://peering-manager.net/">
+  <link rel="icon" type="image/svg+xml" href="img/logo_yellow.svg">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://peering-manager.net/">
   <meta property="og:title" content="Peering Manager">
   <meta property="og:description" content="Peering Manager is an open-source BGP session management solution built with Python and Django.">
   <meta property="og:image" content="https://peering-manager.net/img/og-image.png">
-  <meta property="og:url" content="https://peering-manager.net/">
-  <meta property="og:type" content="website">
-  <title>Peering Manager</title>
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Peering Manager">
+  <meta name="twitter:description" content="Peering Manager is an open-source BGP session management solution built with Python and Django.">
+  <meta name="twitter:image" content="https://peering-manager.net/img/og-image.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="main.css">
+  <script src="site.js"></script>
 </head>
 
 <body>
-  <header class="navbar navbar-expand-lg sticky-top bg-body-tertiary border-bottom">
-    <div class="container-fluid">
-      <a href="/" class="navbar-brand">
-        <img src="img/logo_yellow.svg" height="48" alt="Peering Manager Logo"> Peering Manager
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <nav class="topbar" aria-label="Primary">
+    <div class="topbar-inner">
+      <div class="left">
+        <a href="/" class="wm" aria-label="Peering Manager home">
+          <img src="img/logo_yellow.svg" alt="">
+          <span>Peering <span class="hl">Manager</span></span>
+        </a>
+        <span class="pill">Open Source</span>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" type="button"
+              aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <svg class="open-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="4" y1="7" x2="20" y2="7"/>
+          <line x1="4" y1="12" x2="20" y2="12"/>
+          <line x1="4" y1="17" x2="20" y2="17"/>
+        </svg>
+        <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="6" y1="6" x2="18" y2="18"/>
+          <line x1="18" y1="6" x2="6" y2="18"/>
+        </svg>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="https://docs.peering-manager.net/" target="_blank" rel="noopener">
-              <i class="bi bi-book-fill"></i> Documentation
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/peering-manager/" target="_blank" rel="noopener">
-              <i class="bi bi-github"></i> GitHub
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="talks.html"><i class="bi bi-easel-fill"></i>
-              Talks</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://netdev.chat" target="_blank" rel="noopener">
-              <i class="bi bi-slack"></i> NetDev
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/peering-manager/peering-manager/discussions" target="_blank" rel="noopener">
-              <i class="bi bi-patch-question-fill"></i> Get Help
-            </a>
-          </li>
-        </ul>
-        <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
-          <li class="nav-item dropdown">
-            <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
-              <svg class="bi my-1 theme-icon-active"><use href="libs/bootstrap-icons-1.11.3/bootstrap-icons.svg#circle-half"></use></svg>
-              <span class="d-lg-none ms-2">Toggle theme</span>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme" style="--bs-dropdown-min-width: 8rem;">
-              <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
-                  <svg class="bi me-2 opacity-50 theme-icon"><use href="libs/bootstrap-icons-1.11.3/bootstrap-icons.svg#sun-fill"></use></svg>
-                  Light
-                  <svg class="bi ms-auto d-none"><use href="libs/bootstrap-icons-1.11.3/bootstrap-icons.svg#check2"></use></svg>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="dark">
-                  <svg class="bi me-2 opacity-50 theme-icon"><use href="libs/bootstrap-icons-1.11.3/bootstrap-icons.svg#moon-stars-fill"></use></svg>
-                  Dark
-                  <svg class="bi ms-auto d-none"><use href="libs/bootstrap-icons-1.11.3/bootstrap-icons.svg#check2"></use></svg>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto">
-                  <svg class="bi me-2 opacity-50 theme-icon"><use href="libs/bootstrap-icons-1.11.3/bootstrap-icons.svg#circle-half"></use></svg>
-                  Auto
-                  <svg class="bi ms-auto d-none"><use href="libs/bootstrap-icons-1.11.3/bootstrap-icons.svg#check2"></use></svg>
-                </button>
-              </li>
-            </ul>
-          </li>
-        </ul>
+      <div class="nav" id="primary-nav">
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#sponsors">Sponsors</a>
+        <a href="talks.html">Talks</a>
+        <a href="https://docs.peering-manager.net/" target="_blank" rel="noopener">Docs</a>
+        <a href="https://github.com/peering-manager/" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://netdev.chat" target="_blank" rel="noopener">NetDev</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"/></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="main">
+    <div class="wrap">
+      <div class="hero-mark">
+        <img src="img/logo_yellow.svg" alt="" aria-hidden="true">
+      </div>
+      <div class="meta">
+        <span><b>BGP automation</b></span>
+        <span>Python and Django</span>
+        <span>Apache-2.0</span>
+        <span>Since 2017</span>
+      </div>
+
+      <h1 class="title">Peering <span class="hl">Manager</span></h1>
+
+      <p class="lede">An open-source BGP session management solution. Track, configure and maintain peering sessions from a single source of truth.</p>
+
+      <p class="sub">Designed with features and simplicity in mind, Peering Manager lets engineers manage BGP sessions from a centralised point without the tedious manual provisioning that comes with every new peer.</p>
+
+      <div class="cta-row">
+        <a class="btn primary" href="https://demo.peering-manager.net/" target="_blank" rel="noopener">Try the demo <span class="arr">&rarr;</span></a>
+        <a class="btn" href="https://docs.peering-manager.net/setup/1-postgresql/" target="_blank" rel="noopener">Get started</a>
+        <a class="btn" href="https://github.com/peering-manager/" target="_blank" rel="noopener">View on GitHub</a>
       </div>
     </div>
   </header>
-  <div class="home">
-    <div class="header section less-padding bg-body-tertiary">
-      <div class="container z-10">
-        <div class="text-center">
-          <img src="img/pm-light.svg" class="img-fluid hide-theme-dark" alt="Peering Manager">
-          <img src="img/pm-dark.svg" class="img-fluid hide-theme-light" alt="Peering Manager">
-          <div class="buttons mt-4">
-            <a href="https://demo.peering-manager.net/" target="_blank" rel="nofollow noopener" class="btn btn-custom">
-              Demo
-            </a>
-            <a href="https://docs.peering-manager.net/setup/1-postgresql/" target="_blank" rel="nofollow noopener" class="btn btn-custom">
-              Get started
-            </a>
+
+  <section id="preview">
+    <div class="wrap">
+      <h2>A glimpse</h2>
+      <p class="lead">Manage autonomous systems, internet exchanges, peering sessions and routers from a single interface.</p>
+
+      <div class="browser" id="browser">
+        <div class="browser-bar">
+          <div class="lights"><span></span><span></span><span></span></div>
+          <div class="ttl" id="browser-title">Home - Peering Manager</div>
+        </div>
+        <div class="browser-body">
+          <div class="slide active" data-title="Home - Peering Manager">
+            <img src="img/screenshots/home-light.png" class="theme-light" alt="Peering Manager home dashboard" loading="lazy">
+            <img src="img/screenshots/home-dark.png" class="theme-dark" alt="" aria-hidden="true" loading="lazy">
+          </div>
+          <div class="slide" data-title="AS64498 Stark Industries - Peering Manager">
+            <img src="img/screenshots/as-light.png" class="theme-light" alt="Autonomous System detail page" loading="lazy">
+            <img src="img/screenshots/as-dark.png" class="theme-dark" alt="" aria-hidden="true" loading="lazy">
+          </div>
+          <div class="slide" data-title="S.H.I.E.L.D. Internet Exchange - Peering Manager">
+            <img src="img/screenshots/ix-light.png" class="theme-light" alt="Internet Exchange detail page" loading="lazy">
+            <img src="img/screenshots/ix-dark.png" class="theme-dark" alt="" aria-hidden="true" loading="lazy">
+          </div>
+          <div class="slide" data-title="core01.nyc - Peering Manager">
+            <img src="img/screenshots/router-light.png" class="theme-light" alt="Router detail page" loading="lazy">
+            <img src="img/screenshots/router-dark.png" class="theme-dark" alt="" aria-hidden="true" loading="lazy">
           </div>
         </div>
       </div>
-    </div>
-    <div class="section bg-body-secondary">
-      <div class="container text-center">
-        <h1 class="text-dark-yellow mb-4">Peering Manager</h1>
-        <p class="text-dark-emphasis text-shrink leading-normal mx-auto">Peering Manager is an open-source BGP
-          session management solution built with Python and the Django Framework. Designed with features and simplicity in mind, it allows
-          engineers to track, maintain and configure BGP sessions from a centralised management point without the usual tedious manual provisioning task.</p>
-        <p class="text-dark-emphasis text-shrink leading-normal mx-auto">Built for network engineers, by network engineers. Peering Manager's
-          team is committed to building a flexible, scaleable and future proof session management tool enabling network engineers to make the most out of
-          their networks.</p>
+
+      <div class="browser-dots" id="browser-dots" aria-label="Screenshots">
+        <button type="button" class="active" aria-label="Home (slide 1 of 4)"></button>
+        <button type="button" aria-label="Autonomous System (slide 2 of 4)"></button>
+        <button type="button" aria-label="Internet Exchange (slide 3 of 4)"></button>
+        <button type="button" aria-label="Router (slide 4 of 4)"></button>
       </div>
     </div>
-    <div class="section bg-body-tertiary">
-      <div class="container text-center">
-        <h1 class="text-dark-emphasis mb-4">Sponsoring</h1>
-        <p class="text-dark-emphasis text-shrink leading-normal mx-auto">Peering Manager is free and will
-          remain free. However developing does cost money to pay for domain names, servers and most of all, it takes
-          time. You can help secure Peering Manager's future by any means you feel necessary. Any and all sponsorships are greatly appreciated.</p>
-        <div class="d-grid gap-2 col-6 mx-auto mt-4">
-          <a href="https://github.com/sponsors/gmazoyer" target="_blank" rel="nofollow noopener" class="btn btn-lg btn-outline-danger">
-            <i class="bi bi-heart-fill"></i> GitHub Sponsors
-          </a>
-          <div class="btn-group">
-            <a href="https://ko-fi.com/gmazoyer" target="_blank" rel="nofollow noopener" class="btn btn-outline-secondary">
-              <i class="bi bi-cup-hot-fill"></i> Ko-fi
-            </a>
-            <a href="https://paypal.me/GuillaumeMazoyer" target="_blank" rel="nofollow noopener" class="btn btn-outline-secondary">
-              <i class="bi bi-paypal"></i> Paypal
-            </a>
-          </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>What it is</h2>
+      <p class="lead">Peering Manager is an open-source BGP session management solution built with Python and the Django Framework.</p>
+      <p>Built for network engineers, by network engineers. The team is committed to building a flexible, scalable and future-proof tool that helps network engineers make the most out of their networks.</p>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="wrap">
+      <h2>Why Peering Manager</h2>
+      <p class="lead">One tool to keep your peer autonomous systems, sessions, IXPs and configuration in sync.</p>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>Source of truth</h3>
+          <p>Centralise IXPs, peer ASNs, sessions, policies and route servers in one place.</p>
+          <div class="why">One declarative state for your peering setup</div>
         </div>
-        <hr>
-        <p class="text-dark-emphasis text-shrink leading-normal mx-auto" id="sponsors">The amazing sponsors believing in the Peering Manager project:</p>
-        <div class="row align-items-center mb-5">
-          <a class="col d-flex justify-content-center" href="https://www.linx.net" target="_blank" rel="nofollow noopener">
-            <img src="img/logo_linx.png" class="sponsor-logo" alt="London Internet Exchange">
-          </a>
-          <a class="col d-flex justify-content-center" href="https://www.clouvider.com/" target="_blank" rel="nofollow noopener">
-            <img src="img/logo_clouvider.svg" class="sponsor-logo" alt="Clouvider">
-          </a>
-          <a class="col d-flex justify-content-center" href="https://www.htp.net/" target="_blank" rel="nofollow noopener">
-            <img src="img/logo_htp.png" class="sponsor-logo" alt="htp GmbH">
-          </a>
+        <div class="feature-card">
+          <h3>Configuration generation</h3>
+          <p>Render router configs from Jinja2 templates that work with any vendor.</p>
+          <div class="why">Juniper, Cisco, Arista, and more thanks to NAPALM</div>
+        </div>
+        <div class="feature-card">
+          <h3>PeeringDB integration</h3>
+          <p>Pull data from PeeringDB and prefixes from IRR</p>
+          <div class="why">Stay in sync with the source</div>
+        </div>
+        <div class="feature-card">
+          <h3>API-first</h3>
+          <p>Full REST API for end-to-end automation.</p>
+          <div class="why">Integrate with your automation framework</div>
         </div>
       </div>
     </div>
-    <footer class="bg-secondary">
-      <div class="container text-center text-light">
-        <small>Apache-2.0 Licensed | Copyright &copy; 2017 - 2026 Guillaume Mazoyer &amp; Contributors</small>
+  </section>
+
+  <section id="sponsors" class="bg-soft">
+    <div class="wrap">
+      <h2>Sponsoring</h2>
+      <p class="lead">Peering Manager is free and will remain free.</p>
+      <p>However, developing it does cost money to pay for domain names, servers and most of all, it takes time. You can help secure Peering Manager's future by any means you feel necessary. Any and all sponsorships are greatly appreciated.</p>
+
+      <div class="cta-row">
+        <a class="btn primary" href="https://github.com/sponsors/gmazoyer" target="_blank" rel="nofollow noopener">GitHub Sponsors <span class="arr">&rarr;</span></a>
+        <a class="btn" href="https://ko-fi.com/gmazoyer" target="_blank" rel="nofollow noopener">Ko-fi</a>
+        <a class="btn" href="https://paypal.me/GuillaumeMazoyer" target="_blank" rel="nofollow noopener">PayPal</a>
       </div>
-    </footer>
-  </div>
-  <script src="libs/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+      <hr>
+
+      <h3>Sponsors believing in the project</h3>
+      <p class="dim">A huge thank you to the organisations supporting the work.</p>
+
+      <div class="sponsors-row">
+        <a href="https://www.linx.net" target="_blank" rel="nofollow noopener" aria-label="London Internet Exchange">
+          <img src="img/logo_linx.png" alt="London Internet Exchange">
+        </a>
+        <a href="https://www.clouvider.com/" target="_blank" rel="nofollow noopener" aria-label="Clouvider">
+          <img src="img/logo_clouvider.svg" alt="Clouvider">
+        </a>
+        <a href="https://www.htp.net/" target="_blank" rel="nofollow noopener" aria-label="htp GmbH">
+          <img src="img/logo_htp.png" alt="htp GmbH">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="row">
+        <div>Apache-2.0 Licensed</div>
+        <div>&copy; 2017 - <span data-year>2026</span> Guillaume Mazoyer &amp; Contributors</div>
+      </div>
+    </div>
+  </footer>
+
 </body>
 
 </html>

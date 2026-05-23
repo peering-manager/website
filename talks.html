@@ -4,201 +4,193 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="libs/bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="stylesheet" href="libs/bootstrap-icons-1.11.3/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="main.css">
-  <script src="mode-toggle.js"></script>
-  <link rel="icon" type="image/svg+xml" href="img/logo_yellow.svg">
+  <title>Peering Manager - Talks</title>
   <meta name="description" content="Talks and presentations about Peering Manager at conferences and network operator group meetings.">
+  <meta name="theme-color" content="#fdfbf5">
+  <link rel="canonical" href="https://peering-manager.net/talks.html">
+  <link rel="icon" type="image/svg+xml" href="img/logo_yellow.svg">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://peering-manager.net/talks.html">
   <meta property="og:title" content="Peering Manager - Talks">
   <meta property="og:description" content="Talks and presentations about Peering Manager at conferences and network operator group meetings.">
   <meta property="og:image" content="https://peering-manager.net/img/og-image.png">
-  <meta property="og:url" content="https://peering-manager.net/talks.html">
-  <meta property="og:type" content="website">
-  <title>Peering Manager - Talks</title>
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Peering Manager - Talks">
+  <meta name="twitter:description" content="Talks and presentations about Peering Manager at conferences and network operator group meetings.">
+  <meta name="twitter:image" content="https://peering-manager.net/img/og-image.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="main.css">
+  <script src="site.js"></script>
 </head>
 
 <body>
-  <header class="navbar navbar-expand-lg sticky-top bg-body-tertiary border-bottom">
-    <div class="container-fluid">
-      <a href="/" class="navbar-brand">
-        <img src="img/logo_yellow.svg" height="48" alt="Peering Manager Logo"> Peering Manager
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="https://docs.peering-manager.net/" target="_blank" rel="noopener">
-              <i class="bi bi-book-fill"></i> Documentation
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/peering-manager/" target="_blank" rel="noopener">
-              <i class="bi bi-github"></i> GitHub
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="talks.html"><i class="bi bi-easel-fill"></i>
-              Talks</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://netdev.chat" target="_blank" rel="noopener">
-              <i class="bi bi-slack"></i> NetDev
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/peering-manager/peering-manager/discussions" target="_blank" rel="noopener">
-              <i class="bi bi-patch-question-fill"></i> Get Help
-            </a>
-          </li>
-        </ul>
-        <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
-          <li class="nav-item dropdown">
-            <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
-              <svg class="bi my-1 theme-icon-active"><use href="libs/bootstrap-icons-1.11.3/bootstrap-icons.svg#circle-half"></use></svg>
-              <span class="d-lg-none ms-2">Toggle theme</span>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme" style="--bs-dropdown-min-width: 8rem;">
-              <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
-                  <svg class="bi me-2 opacity-50 theme-icon"><use href="libs/bootstrap-icons-1.11.3/bootstrap-icons.svg#sun-fill"></use></svg>
-                  Light
-                  <svg class="bi ms-auto d-none"><use href="libs/bootstrap-icons-1.11.3/bootstrap-icons.svg#check2"></use></svg>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="dark">
-                  <svg class="bi me-2 opacity-50 theme-icon"><use href="libs/bootstrap-icons-1.11.3/bootstrap-icons.svg#moon-stars-fill"></use></svg>
-                  Dark
-                  <svg class="bi ms-auto d-none"><use href="libs/bootstrap-icons-1.11.3/bootstrap-icons.svg#check2"></use></svg>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto">
-                  <svg class="bi me-2 opacity-50 theme-icon"><use href="libs/bootstrap-icons-1.11.3/bootstrap-icons.svg#circle-half"></use></svg>
-                  Auto
-                  <svg class="bi ms-auto d-none"><use href="libs/bootstrap-icons-1.11.3/bootstrap-icons.svg#check2"></use></svg>
-                </button>
-              </li>
-            </ul>
-          </li>
-        </ul>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <nav class="topbar" aria-label="Primary">
+    <div class="topbar-inner">
+      <div class="left">
+        <a href="/" class="wm" aria-label="Peering Manager home">
+          <img src="img/logo_yellow.svg" alt="">
+          <span>Peering <span class="hl">Manager</span></span>
+        </a>
+        <span class="pill">Open Source</span>
       </div>
+      <button class="nav-toggle" id="nav-toggle" type="button"
+              aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <svg class="open-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="4" y1="7" x2="20" y2="7"/>
+          <line x1="4" y1="12" x2="20" y2="12"/>
+          <line x1="4" y1="17" x2="20" y2="17"/>
+        </svg>
+        <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="6" y1="6" x2="18" y2="18"/>
+          <line x1="18" y1="6" x2="6" y2="18"/>
+        </svg>
+      </button>
+      <div class="nav" id="primary-nav">
+        <a href="index.html#about">About</a>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#sponsors">Sponsors</a>
+        <a href="talks.html" class="active">Talks</a>
+        <a href="https://docs.peering-manager.net/" target="_blank" rel="noopener">Docs</a>
+        <a href="https://github.com/peering-manager/" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://netdev.chat" target="_blank" rel="noopener">NetDev</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"/></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="main">
+    <div class="wrap">
+      <div class="meta">
+        <span><b>Conference talks</b></span>
+        <span>RIPE, LINX, LACNOG, FRnOG, DE-CIX</span>
+      </div>
+
+      <h1 class="title">Talks &amp; <span class="hl">Presentations</span></h1>
+
+      <p class="lede">Peering Manager has been presented at conferences and network operator group meetings around the world.</p>
     </div>
   </header>
-  <div class="container mt-3">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-      <div class="col">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Peering Manager</h5>
-            <h6 class="card-subtitle mb-2 text-body-secondary">During LACNOG40, by Tomás Lynch, in Spanish</h6>
-            <p class="card-text">Presentation about Peering Manager to LACNOG audience.</p>
+
+  <section>
+    <div class="wrap">
+      <h2>Recordings &amp; slides</h2>
+
+      <div class="talks-grid">
+
+        <article class="talk-card">
+          <p class="talk-meta">RIPE92, Guillaume Mazoyer, English</p>
+          <h3>Creating a peering portal with Peering Manager</h3>
+          <p class="desc">Presentation about a peering portal combined with Peering Manager to the RIPE meeting.</p>
+          <div class="talk-actions">
+            <a class="primary" href="https://ripe92.ripe.net/programme/meeting-plan/sessions/84/CBSJHG/" target="_blank" rel="noopener">Video <span class="arr">&rarr;</span></a>
+            <a href="https://pretalx.ripe.net/media/ripe-92/submissions/CBSJHG/resources/gmazoyer_ripe92_conn_o0J6NYA.pdf" target="_blank" rel="noopener">Slides</a>
           </div>
-          <div class="card-footer">
-            <a href="https://www.youtube.com/watch?v=OrJn5JRZjz0" class="card-link btn btn-sm btn-primary"><i class="bi bi-camera-video-fill"></i> Video</a>
-            <a href="https://apievt.lacnic.net/wp-content/uploads/2023/10/lacnog2023-peering-manager-nuevo.pdf" class="card-link btn btn-sm btn-secondary"><i class="bi bi-file-earmark-easel-fill"></i> Slide Deck</a>
+        </article>
+
+        <article class="talk-card">
+          <p class="talk-meta">LACNOG40, Tomás Lynch, Spanish</p>
+          <h3>Peering Manager</h3>
+          <p class="desc">Presentation about Peering Manager to the LACNOG audience.</p>
+          <div class="talk-actions">
+            <a class="primary" href="https://www.youtube.com/watch?v=OrJn5JRZjz0" target="_blank" rel="noopener">Video <span class="arr">&rarr;</span></a>
+            <a href="https://apievt.lacnic.net/wp-content/uploads/2023/10/lacnog2023-peering-manager-nuevo.pdf" target="_blank" rel="noopener">Slides</a>
           </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Simplifying Peering with Open Source</h5>
-            <h6 class="card-subtitle mb-2 text-body-secondary">During LINX118, by Guillaume Mazoyer, in English</h6>
-            <p class="card-text">Presentation about Peering Manager to LINX audience.</p>
+        </article>
+
+        <article class="talk-card">
+          <p class="talk-meta">LINX118, Guillaume Mazoyer, English</p>
+          <h3>Simplifying Peering with Open Source</h3>
+          <p class="desc">Presentation about Peering Manager to the LINX audience.</p>
+          <div class="talk-actions">
+            <a class="primary" href="https://www.youtube.com/watch?v=X6wVnC2QPho" target="_blank" rel="noopener">Video <span class="arr">&rarr;</span></a>
+            <a href="https://www.linx.net/wp-content/uploads/2022/07/LINX118-PeeringManager-GuillaumeMazoyer.pdf" target="_blank" rel="noopener">Slides</a>
           </div>
-          <div class="card-footer">
-            <a href="https://www.youtube.com/watch?v=X6wVnC2QPho" class="card-link btn btn-sm btn-primary"><i class="bi bi-camera-video-fill"></i> Video</a>
-            <a href="https://www.linx.net/wp-content/uploads/2022/07/LINX118-PeeringManager-GuillaumeMazoyer.pdf" class="card-link btn btn-sm btn-secondary"><i class="bi bi-file-earmark-easel-fill"></i> Slide Deck</a>
+        </article>
+
+        <article class="talk-card">
+          <p class="talk-meta">RIPE84, Guillaume Mazoyer, English</p>
+          <h3>An introduction to Peering Manager</h3>
+          <p class="desc">An updated presentation of Peering Manager at RIPE meeting.</p>
+          <div class="talk-actions">
+            <a class="primary" href="https://ripe84.ripe.net/archives/video/790/" target="_blank" rel="noopener">Video <span class="arr">&rarr;</span></a>
+            <a href="https://ripe84.ripe.net/presentations/52-Peering_Manager_RIPE84_OSS_WG.pdf" target="_blank" rel="noopener">Slides</a>
           </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">An introduction to Peering Manager</h5>
-            <h6 class="card-subtitle mb-2 text-body-secondary">During RIPE84, by Guillaume Mazoyer, in English</h6>
-            <p class="card-text">An updated presentation of Peering Manager at RIPE meeting.</p>
+        </article>
+
+        <article class="talk-card">
+          <p class="talk-meta">DE-CIX Tech Meeting 2021, Guillaume Mazoyer, English</p>
+          <h3>Keeping track of your BGP configuration</h3>
+          <p class="desc">Presentation of Peering Manager with a demo at a DE-CIX event.</p>
+          <div class="talk-actions">
+            <a class="primary" href="https://youtu.be/MoPr9ttIMwE" target="_blank" rel="noopener">Video <span class="arr">&rarr;</span></a>
           </div>
-          <div class="card-footer">
-            <a href="https://ripe84.ripe.net/archives/video/790/" class="card-link btn btn-sm btn-primary"><i class="bi bi-camera-video-fill"></i> Video</a>
-            <a href="https://ripe84.ripe.net/presentations/52-Peering_Manager_RIPE84_OSS_WG.pdf" class="card-link btn btn-sm btn-secondary"><i class="bi bi-file-earmark-easel-fill"></i> Slide Deck</a>
+        </article>
+
+        <article class="talk-card">
+          <p class="talk-meta">NetLdn16, Guillaume Mazoyer, English</p>
+          <h3>Peering Manager - Your BGP Source Of Truth</h3>
+          <p class="desc">Presentation of Peering Manager at local UK NOG.</p>
+          <div class="talk-actions">
+            <a href="https://drive.mazoyer.eu/s/EHj3pH87Pe55Rfa" target="_blank" rel="noopener">Slides <span class="arr">&rarr;</span></a>
           </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Keeping track of your BGP configuration</h5>
-            <h6 class="card-subtitle mb-2 text-body-secondary">During DE-CIX Tech Meeting 2021, by Guillaume Mazoyer, in English</h6>
-            <p class="card-text">Presentation of Peering Manager with a demo at a DE-CIX event.</p>
+        </article>
+
+        <article class="talk-card">
+          <p class="talk-meta">LUNOG2, Guillaume Mazoyer, English</p>
+          <h3>A better Internet thanks to peering and automation</h3>
+          <p class="desc">Presentation of Peering Manager at Luxembourg NOG.</p>
+          <div class="talk-actions">
+            <a href="https://drive.mazoyer.eu/index.php/s/3RiyrPQd3Tdwc96" target="_blank" rel="noopener">Slides <span class="arr">&rarr;</span></a>
           </div>
-          <div class="card-footer">
-            <a href="https://youtu.be/MoPr9ttIMwE" class="card-link btn btn-sm btn-primary"><i class="bi bi-camera-video-fill"></i> Video</a>
+        </article>
+
+        <article class="talk-card">
+          <p class="talk-meta">FRnOG32, Guillaume Mazoyer, French</p>
+          <h3>Peering Automation and Documentation</h3>
+          <p class="desc">Presentation of Peering Manager at French NOG.</p>
+          <div class="talk-actions">
+            <a class="primary" href="https://www.dailymotion.com/video/x756n1e" target="_blank" rel="noopener">Video <span class="arr">&rarr;</span></a>
+            <a href="https://media.frnog.org/FRnOG_32/FRnOG_32-5.pdf" target="_blank" rel="noopener">Slides</a>
           </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Peering Manager - Your BGP Source Of Truth</h5>
-            <h6 class="card-subtitle mb-2 text-body-secondary">During NetLdn16, by Guillaume Mazoyer, in English</h6>
-            <p class="card-text">Presentation of Peering Manager at local UK NOG.</p>
+        </article>
+
+        <article class="talk-card">
+          <p class="talk-meta">RIPE76, Guillaume Mazoyer, English</p>
+          <h3>Peering Manager - Easing Peering Sessions Management</h3>
+          <p class="desc">First talk and public reveal of Peering Manager.</p>
+          <div class="talk-actions">
+            <a class="primary" href="https://ripe76.ripe.net/archives/video/13/" target="_blank" rel="noopener">Video <span class="arr">&rarr;</span></a>
+            <a href="https://ripe76.ripe.net/presentations/13-Peering_Manager_RIPE76_LT.pdf" target="_blank" rel="noopener">Slides</a>
           </div>
-          <div class="card-footer">
-            <a href="https://drive.mazoyer.eu/s/EHj3pH87Pe55Rfa" class="card-link btn btn-sm btn-secondary"><i class="bi bi-file-earmark-easel-fill"></i> Slide Deck</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">A better Internet thanks to peering and automation</h5>
-            <h6 class="card-subtitle mb-2 text-body-secondary">During LUNOG2, by Guillaume Mazoyer, in English</h6>
-            <p class="card-text">Presentation of Peering Manager at Luxembourg NOG.</p>
-          </div>
-          <div class="card-footer">
-            <a href="https://drive.mazoyer.eu/index.php/s/3RiyrPQd3Tdwc96" class="card-link btn btn-sm btn-secondary"><i class="bi bi-file-earmark-easel-fill"></i> Slide Deck</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Peering Automation and Documentation</h5>
-            <h6 class="card-subtitle mb-2 text-body-secondary">During FRnOG32, by Guillaume Mazoyer, in French</h6>
-            <p class="card-text">Presentation of Peering Manager at French NOG.</p>
-          </div>
-          <div class="card-footer">
-            <a href="https://www.dailymotion.com/video/x756n1e" class="card-link btn btn-sm btn-primary"><i class="bi bi-camera-video-fill"></i> Video</a>
-            <a href="https://media.frnog.org/FRnOG_32/FRnOG_32-5.pdf" class="card-link btn btn-sm btn-secondary"><i class="bi bi-file-earmark-easel-fill"></i> Slide Deck</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Peering Manager - Easing Peering Sessions Management</h5>
-            <h6 class="card-subtitle mb-2 text-body-secondary">During RIPE76, by Guillaume Mazoyer, in English</h6>
-            <p class="card-text">First talk and public reveal of Peering Manager.</p>
-          </div>
-          <div class="card-footer">
-            <a href="https://ripe76.ripe.net/archives/video/13/" class="card-link btn btn-sm btn-primary"><i class="bi bi-camera-video-fill"></i> Video</a>
-            <a href="https://ripe76.ripe.net/presentations/13-Peering_Manager_RIPE76_LT.pdf" class="card-link btn btn-sm btn-secondary"><i class="bi bi-file-earmark-easel-fill"></i> Slide Deck</a>
-          </div>
-        </div>
+        </article>
+
       </div>
     </div>
-  </div>
-  <footer class="bg-secondary mt-4">
-    <div class="container text-center text-light">
-      <small>Apache-2.0 Licensed | Copyright &copy; 2017 - 2026 Guillaume Mazoyer &amp; Contributors</small>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="row">
+        <div>Apache-2.0 Licensed</div>
+        <div>&copy; 2017 - <span data-year>2026</span> Guillaume Mazoyer &amp; Contributors</div>
+      </div>
     </div>
   </footer>
-  <script src="libs/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
