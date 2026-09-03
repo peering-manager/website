@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Peering Manager</title>
-  <meta name="description" content="Peering Manager is an open-source BGP session management solution built with Python and Django.">
+  <meta name="description" content="Peering Manager is an open-source BGP session management tool, written in Python on Django.">
   <meta name="theme-color" content="#fdfbf5">
   <link rel="canonical" href="https://peering-manager.net/">
   <link rel="icon" type="image/svg+xml" href="img/logo_yellow.svg">
@@ -13,18 +13,18 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://peering-manager.net/">
   <meta property="og:title" content="Peering Manager">
-  <meta property="og:description" content="Peering Manager is an open-source BGP session management solution built with Python and Django.">
+  <meta property="og:description" content="Peering Manager is an open-source BGP session management tool, written in Python on Django.">
   <meta property="og:image" content="https://peering-manager.net/img/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Peering Manager">
-  <meta name="twitter:description" content="Peering Manager is an open-source BGP session management solution built with Python and Django.">
+  <meta name="twitter:description" content="Peering Manager is an open-source BGP session management tool, written in Python on Django.">
   <meta name="twitter:image" content="https://peering-manager.net/img/og-image.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="main.css">
   <script src="site.js"></script>
 </head>
@@ -40,7 +40,6 @@
           <img src="img/logo_yellow.svg" alt="">
           <span>Peering <span class="hl">Manager</span></span>
         </a>
-        <span class="pill">Open Source</span>
       </div>
       <button class="nav-toggle" id="nav-toggle" type="button"
               aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
@@ -87,12 +86,12 @@
 
       <h1 class="title">Peering <span class="hl">Manager</span></h1>
 
-      <p class="lede">An open-source BGP session management solution. Track, configure and maintain peering sessions from a single source of truth.</p>
+      <p class="lede">An open-source BGP session management tool. One source of truth for every peer, exchange and router you run.</p>
 
-      <p class="sub">Designed with features and simplicity in mind, Peering Manager lets engineers manage BGP sessions from a centralised point without the tedious manual provisioning that comes with every new peer.</p>
+      <p class="sub">You add a peer once. Peering Manager holds the session, the policy and the prefix limits, then renders the configuration each of your routers needs.</p>
 
       <div class="cta-row">
-        <a class="btn primary" href="https://demo.peering-manager.net/" target="_blank" rel="noopener">Try the demo <span class="arr">&rarr;</span></a>
+        <a class="btn primary" href="https://demo.peering-manager.net/" target="_blank" rel="noopener">Try the demo</a>
         <a class="btn" href="https://docs.peering-manager.net/setup/1-postgresql/" target="_blank" rel="noopener">Get started</a>
         <a class="btn" href="https://github.com/peering-manager/" target="_blank" rel="noopener">View on GitHub</a>
       </div>
@@ -101,12 +100,11 @@
 
   <section id="preview">
     <div class="wrap">
-      <h2>A glimpse</h2>
-      <p class="lead">Manage autonomous systems, internet exchanges, peering sessions and routers from a single interface.</p>
+      <h2>Screens</h2>
+      <p class="lead">Autonomous systems, internet exchanges, sessions and routers, from one interface.</p>
 
       <div class="browser" id="browser">
         <div class="browser-bar">
-          <div class="lights"><span></span><span></span><span></span></div>
           <div class="ttl" id="browser-title">Home - Peering Manager</div>
         </div>
         <div class="browser-body">
@@ -141,36 +139,36 @@
   <section id="about">
     <div class="wrap">
       <h2>What it is</h2>
-      <p class="lead">Peering Manager is an open-source BGP session management solution built with Python and the Django Framework.</p>
-      <p>Built for network engineers, by network engineers. The team is committed to building a flexible, scalable and future-proof tool that helps network engineers make the most out of their networks.</p>
+      <p class="lead">Peering Manager is an open-source BGP session management tool, written in Python on Django.</p>
+      <p>Built for network engineers, by network engineers. The code, the issues and the roadmap are public under Apache-2.0. Read it, file a bug, or send a patch.</p>
     </div>
   </section>
 
   <section id="features">
     <div class="wrap">
-      <h2>Why Peering Manager</h2>
-      <p class="lead">One tool to keep your peer autonomous systems, sessions, IXPs and configuration in sync.</p>
+      <h2>What it does</h2>
+      <p class="lead">Four jobs, done once, for every peer you add.</p>
 
       <div class="feature-grid">
         <div class="feature-card">
           <h3>Source of truth</h3>
-          <p>Centralise IXPs, peer ASNs, sessions, policies and route servers in one place.</p>
-          <div class="why">One declarative state for your peering setup</div>
+          <p>Internet exchanges, peer ASNs, sessions, routing policies and route servers live in one database.</p>
+          <div class="why">One place to change, instead of a spreadsheet</div>
         </div>
         <div class="feature-card">
-          <h3>Configuration generation</h3>
-          <p>Render router configs from Jinja2 templates that work with any vendor.</p>
-          <div class="why">Juniper, Cisco, Arista, and more thanks to NAPALM</div>
+          <h3>Configuration</h3>
+          <p>Jinja2 templates render the configuration each router takes. NAPALM pushes it and shows you the difference first.</p>
+          <div class="why">Templates published for Junos, IOS, IOS XR, EOS, SR OS and VyOS</div>
         </div>
         <div class="feature-card">
-          <h3>PeeringDB integration</h3>
-          <p>Pull data from PeeringDB and prefixes from IRR</p>
-          <div class="why">Stay in sync with the source</div>
+          <h3>PeeringDB and IRR</h3>
+          <p>Peer contacts, exchange presence and prefix limits come from PeeringDB. Prefix lists come from the IRR.</p>
+          <div class="why">Both stay current without you touching them</div>
         </div>
         <div class="feature-card">
-          <h3>API-first</h3>
-          <p>Full REST API for end-to-end automation.</p>
-          <div class="why">Integrate with your automation framework</div>
+          <h3>REST API</h3>
+          <p>Every action in the web interface has an endpoint behind it.</p>
+          <div class="why">Your own automation can do the same work</div>
         </div>
       </div>
     </div>
@@ -183,7 +181,7 @@
       <p>However, developing it does cost money to pay for domain names, servers and most of all, it takes time. You can help secure Peering Manager's future by any means you feel necessary. Any and all sponsorships are greatly appreciated.</p>
 
       <div class="cta-row">
-        <a class="btn primary" href="https://github.com/sponsors/gmazoyer" target="_blank" rel="nofollow noopener">GitHub Sponsors <span class="arr">&rarr;</span></a>
+        <a class="btn primary" href="https://github.com/sponsors/gmazoyer" target="_blank" rel="nofollow noopener">GitHub Sponsors</a>
         <a class="btn" href="https://ko-fi.com/gmazoyer" target="_blank" rel="nofollow noopener">Ko-fi</a>
         <a class="btn" href="https://paypal.me/GuillaumeMazoyer" target="_blank" rel="nofollow noopener">PayPal</a>
       </div>
